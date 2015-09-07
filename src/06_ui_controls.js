@@ -118,6 +118,8 @@ Class ("paella.PlaybackBar", paella.DomNode,{
 		// CONTROLS_BAR POSITON
 		var p = $("#playerContainer_controls_playback_playbackBar");
 		var pos = p.offset();
+		pos.left -= $(window).scrollLeft();
+		pos.top -= $(window).scrollTop();
 
 		var width = $("#playerContainer_controls_playback_playbackBar").width();
 		var left = (event.clientX-pos.left);
